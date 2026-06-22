@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #f9df8a, #e6b96f 45%, #8b5c33 100%);
+  color: #3b2b1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 460px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  margin: 0 0 1.75rem;
+  color: #6f513a;
+  line-height: 1.5;
+}
+
+.squirrel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 241, 210, 0.9);
+  border-radius: 24px;
+}
+
+.squirrel-illustration {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff9ec;
+  box-shadow: inset 0 0 0 1px rgba(139, 92, 51, 0.16);
+}
+
+.squirrel-illustration img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.squirrel-voice {
+  margin: 0;
+  color: #5a4023;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.acorn-button {
+  width: 140px;
+  height: 170px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.acorn-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.16);
+}
+
+.acorn-button:focus-visible {
+  outline: 3px solid #f5d29d;
+  outline-offset: 4px;
+}
+
+.fortune-button-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 24px;
+  object-fit: contain;
+}
+
+.acorn-button {
+  width: 140px;
+  height: 170px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.acorn-top {
+  width: 112px;
+  height: 58px;
+  background: linear-gradient(180deg, #5a3c1b, #37220f);
+  position: absolute;
+  top: 0;
+  border-radius: 60px 60px 30px 30px;
+  box-shadow: inset 0 8px 14px rgba(0, 0, 0, 0.18);
+}
+
+.acorn-body {
+  width: 110px;
+  height: 150px;
+  background: linear-gradient(180deg, #b48339, #8f5a2c);
+  position: absolute;
+  top: 48px;
+  border-radius: 60px 60px 50px 50px;
+  box-shadow: inset 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+
+.acorn-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.16);
+}
+
+.acorn-button:focus-visible {
+  outline: 3px solid #f5d29d;
+  outline-offset: 4px;
+}
+
+.squirrel-frame {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(255, 248, 234, 0.95);
+  border-radius: 26px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.squirrel-illustration {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 36px;
+  background: #fef5ea;
+  box-shadow: inset 0 0 0 1px rgba(139, 92, 51, 0.14);
+}
+
+.speech-bubble {
+  position: relative;
+  padding: 1rem 1.25rem;
+  border-radius: 28px;
+  background: #fffef8;
+  border: 1px solid rgba(165, 120, 70, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -18px;
+  width: 0;
+  height: 0;
+  border: 18px solid transparent;
+  border-top-color: #fffef8;
+}
+
+.speech-bubble p {
+  margin: 0;
+  color: #4d3623;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.fortune-output {
+  display: none;
+}
+
+.fortune-note {
+  margin-top: 1.75rem;
+  color: #5f4227;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.fortune-button {
+  background: linear-gradient(135deg, #e87f3a, #f4c267);
+  border: none;
+  border-radius: 999px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.95rem 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fortune-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(232, 127, 58, 0.27);
+}
+
+.fortune-output {
+  margin-top: 1.75rem;
+  padding: 1.3rem;
+  min-height: 100px;
+  border-radius: 20px;
+  background: #fff6e1;
+  border: 1px dashed #d2ab75;
+  color: #4f3a22;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
